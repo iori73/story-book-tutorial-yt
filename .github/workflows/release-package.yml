@@ -46,7 +46,7 @@ jobs:
           node-version: 18
       - name: Build and push Docker image
         env:
-          IMAGE_NAME: ghcr.io/iori73/storybook
+          IMAGE_NAME: ghcr.io/iori73/storybook-static
         run: |
           docker build -t $IMAGE_NAME:${{ github.sha }} .
           docker push $IMAGE_NAME:${{ github.sha }}
