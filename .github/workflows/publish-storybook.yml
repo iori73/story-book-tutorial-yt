@@ -27,9 +27,10 @@ jobs:
 
       - name: Build and push Docker image
         env:
-          IMAGE_NAME: ghcr.io/${{ github.repository }}/storybook
+          IMAGE_NAME: ghcr.io/iori73/story-book-tutorial-yt/storybook
         run: |
           docker build -t $IMAGE_NAME:${{ github.sha }} .
           docker push $IMAGE_NAME:${{ github.sha }}
           docker tag $IMAGE_NAME:${{ github.sha }} $IMAGE_NAME:latest
           docker push $IMAGE_NAME:latest
+      
