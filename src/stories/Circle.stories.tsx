@@ -10,10 +10,15 @@ const meta: Meta<typeof Circle> = {
         type: 'select',
         options: ['orange', 'green', 'yellow'],
       },
-      description: 'プロジェクトで使用する円のUIコンポーネントです。<br /> `orange`, `green`, `yellow`',
+      description: 'プロジェクトで使用する円のUIコンポーネントです。',
+      // table: {
+      //   type: {
+      //     summary: null, // union型の表示を消す
+      //   },
+      // },
       table: {
         type: {
-          summary: null, // union型の表示を消す
+          summary: 'orange | green | yellow', // Explicitly define the summary
         },
       },
     },
